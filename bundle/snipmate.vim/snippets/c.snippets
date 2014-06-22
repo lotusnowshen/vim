@@ -59,21 +59,21 @@ snippet for
 # Custom For Loop
 snippet forr
 	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
-		${5:/* code */}
+		${5}
 	}
 # Typedef
 snippet td
-	typedef ${1:int} ${2:MyCustomType};${3}
+	typedef
 # Struct
 snippet st
-	struct ${1:`Filename('$1_t', 'name')`} {
+	struct ${1} {
 		${2}
 	};
 # Typedef struct
 snippet tds
 	typedef struct ${2:_$1 }{
 		${3}
-	} ${1:`Filename('$1_t', 'name')`};
+	} ${1:tag};
 # dynamic `...`
 snippet pr
 	printf("${1:%s}\n"${2});${3}
