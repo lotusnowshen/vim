@@ -1,0 +1,85 @@
+# main()
+snippet main
+	int main(int argc, const char *argv[])
+	{
+		${1}
+		return 0;
+	}
+snippet mainn
+	int main(void)
+	{
+		${1}
+		return 0;
+	}
+# #include <...>
+snippet inc
+	#include <${1:stdio}.h>${2}
+# #include "..."
+snippet Inc
+	#include "${1:`Filename("$1.h")`}"${2}
+snippet include
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <string.h>
+snippet linux
+	#include <unistd.h>
+	#include <sys/types.h>
+	#include <sys/stat.h>
+	#include <fcntl.h>
+	#include <sys/wait.h>
+	#include <errno.h>
+	#include <signal.h>
+snippet ipc
+	#include <sys/ipc.h>
+	#include <sys/msg.h>
+	#include <sys/resource.h>
+	#include <sys/sem.h>
+	#include <sys/shm.h>
+	#include <sys/time.h>
+snippet socket
+	#include <unistd.h>
+	#include <errno.h>
+	#include <sys/types.h>
+	#include <sys/socket.h>
+	#include <netinet/in.h>
+	#include <arpa/inet.h>
+# #ifndef ... #define ... #endif
+snippet deff
+	#ifndef ${1:SYMBOL}
+	#define $1 
+	${2}
+	#endif  /*$1*/
+snippet def
+	#define
+# For Loop
+snippet for
+	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+		${4}
+	}
+# Custom For Loop
+snippet forr
+	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
+		${5:/* code */}
+	}
+# Typedef
+snippet td
+	typedef ${1:int} ${2:MyCustomType};${3}
+# Struct
+snippet st
+	struct ${1:`Filename('$1_t', 'name')`} {
+		${2}
+	};
+# Typedef struct
+snippet tds
+	typedef struct ${2:_$1 }{
+		${3}
+	} ${1:`Filename('$1_t', 'name')`};
+# dynamic `...`
+snippet pr
+	printf("${1:%s}\n"${2});${3}
+# fprintf (again, this isn't as nice as TextMate's version, but it works)
+snippet fpr
+	fprintf(${1:stderr}, "${2:%s}\n"${3});${4}
+# This is kind of convenient
+snippet .
+	[${1}]${2}
