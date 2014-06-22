@@ -43,6 +43,13 @@ snippet socket
 	#include <sys/socket.h>
 	#include <netinet/in.h>
 	#include <arpa/inet.h>
+snippet err
+	#define ERR_EXIT(m) \
+		do { \
+			perror(m);\
+			exit(EXIT_FAILURE);\
+		}while(0)
+
 # #ifndef ... #define ... #endif
 snippet deff
 	#ifndef ${1:SYMBOL}
