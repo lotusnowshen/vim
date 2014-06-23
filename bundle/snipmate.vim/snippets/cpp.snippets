@@ -23,10 +23,35 @@ snippet swapcpp
 		b = temp;
 	}
 snippet forit
-	for(vector<${1:std::string}>::iterator it = ${2:vec}.begin(); it != $2.end(); ++it){
+	for(vector<${1:string}>::iterator it = ${2:vec}.begin(); it != $2.end(); ++it){
 		${3:cout << *it << endl;}	
 	}
 snippet forauto
 	for(auto &item: ${1:vec}){
 		${2}	
 	}
+snippet class
+	class ${1:SYMBOL}{
+		public:
+			$1();
+			virtual ~$1();
+		private:
+			${2}
+	};
+snippet Person
+	class Person{
+		public:
+			Person()
+				:id_(-1), name_(""), age_(0){
+			};
+			Person(int id, const string &name, int age)
+				:id_(id), name_(name), age_(age){
+			}
+			void print(){
+				cout << "id=" id_ << " name=" << name_ << " age=" << age_ <<endl;	
+			}
+		private:
+			int id_;
+			string name_;
+			int age_;
+	};
