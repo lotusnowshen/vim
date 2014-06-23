@@ -22,3 +22,11 @@ snippet swapcpp
 		a = b;
 		b = temp;
 	}
+snippet forit
+	for(vector<${1:std::string}>::iterator it = ${2:vec}.begin(); it != $2.end(); ++it){
+		${3:cout << *it << endl;}	
+	}
+snippet forauto
+	for(auto &item: ${1:vec}){
+		${2}	
+	}
