@@ -86,6 +86,28 @@ snippet tds
 	typedef struct ${2:_$1 }{
 		${3}
 	}${1:tag};
+snippet lockinit
+	pthread_mutex_init(${1})
+snippet lock
+	pthread_mutex_lock(${1})
+snippet unlock
+	pthread_mutex_unlock(${1})
+snippet lockdes
+	pthread_mutex_destroy(${1})
+snippet condinit
+	pthread_cond_init(${1})
+snippet conddes
+	pthread_cond_destroy(${1})
+snippet wait
+	pthread_cond_wait(${1})
+snippet signal
+	pthread_cond_signal(${1})
+snippet broad
+	pthread_cond_broadcast(${1})
+snippet creat
+	pthread_create(${1})
+snippet join
+	pthread_join(${1})
 # dynamic `...`
 snippet pr
 	printf("${1:%s}\n"${2});${3}
