@@ -24,11 +24,9 @@ snippet style
 snippet r
 	<br`Close()[1:]`>
 snippet div
-	<div>
-		${1}
-	</div>
+	<div>${1}</div>
 snippet form
-	<form action="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
+	<form act ion="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
 		${3}
 	</form>
 snippet h1
@@ -45,7 +43,13 @@ snippet table
 	<table>
 		${1}
 	</table>
+snippet tr
+	<tr>${1}</tr>
+snippet td
+	<td>${1}</td>
 snippet p
 	<p>${1}</p>
+snippet a
+	<a href="${1:#}">${2}</a>${3}
 snippet link
 	<link rel="stylesheet" type="text/css" href="${1}">

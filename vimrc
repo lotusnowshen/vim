@@ -20,9 +20,12 @@ set cursorline
 set hls
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
 set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
+
+filetype plugin indent on     " required
+
+autocmd BufRead,BufNewFile *.html.erb set filetype=eruby.html
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -38,7 +41,6 @@ Bundle 'msanders/snipmate.vim'
 " Powerline
 let g:Powerline_symbols = 'fancy'
 
-filetype plugin indent on     " required
 
 " NEADTree
 autocmd vimenter * if !argc() | NERDTree | endif
