@@ -21,6 +21,7 @@ set hls
 
 set nocompatible              " be iMproved, required
 set encoding=utf-8
+set paste           " 粘贴模式
 
 filetype plugin indent on     " required
 autocmd BufRead,BufNewFile *.html.erb set filetype=eruby.html
