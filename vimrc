@@ -21,10 +21,8 @@ set hls
 
 set nocompatible              " be iMproved, required
 set encoding=utf-8
-set fillchars+=stl:\ ,stlnc:\
 
 filetype plugin indent on     " required
-
 autocmd BufRead,BufNewFile *.html.erb set filetype=eruby.html
 
 set rtp+=~/.vim/bundle/vundle/
@@ -37,10 +35,15 @@ Bundle 'git@github.com:Raimondi/delimitMate.git'
 Bundle 'hallison/vim-markdown'
 Bundle 'git@github.com:kien/ctrlp.vim.git'
 Bundle 'msanders/snipmate.vim'
+Bundle 'Lokaltog/vim-powerline'
 
 " Powerline
+set guifont=PowerlineSymbols\ for\ Powerline
+set nocompatible
+set laststatus=2
+set t_Co=256
 let g:Powerline_symbols = 'fancy'
-
+let Powerline_symbols='compatible'
 
 " NEADTree
 autocmd vimenter * if !argc() | NERDTree | endif
