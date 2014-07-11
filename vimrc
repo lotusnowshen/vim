@@ -16,15 +16,14 @@ set shiftwidth=4
 
 " line
 set cursorline
-
 set hls
 
 set nocompatible              " be iMproved, required
 set encoding=utf-8
-set paste           " 粘贴模式
 
 filetype plugin indent on     " required
-autocmd BufRead,BufNewFile *.html.erb set filetype=eruby.html
+
+autocmd BufRead,BufNewFile *.html.erb setlocal filetype=eruby
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
