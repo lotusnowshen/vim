@@ -21,6 +21,8 @@ set hls
 set nocompatible              " be iMproved, required
 set encoding=utf-8
 
+:set pastetoggle=<F1>
+
 filetype plugin indent on     " required
 
 autocmd BufRead,BufNewFile *.html.erb setlocal filetype=eruby
